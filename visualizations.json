@@ -1,0 +1,310 @@
+[
+  {
+    "_id": "00cf5710-7eec-11e8-9ad5-5fdd121fd1c3",
+    "_type": "visualization",
+    "_source": {
+      "title": "BlueOps - Tatics per Technique ID",
+      "visState": "{\"title\":\"BlueOps - Tatics per Technique ID\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false,\"labels\":{\"show\":false,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"techniques.tactic.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"techniques.techniqueID.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "e0aeda50-7eeb-11e8-9ad5-5fdd121fd1c3",
+    "_type": "visualization",
+    "_source": {
+      "title": "BlueOps - Tatics",
+      "visState": "{\"title\":\"BlueOps - Tatics\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false,\"labels\":{\"show\":true,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"techniques.tactic.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "c00fb5b0-7f01-11e8-9ad5-5fdd121fd1c3",
+    "_type": "visualization",
+    "_source": {
+      "title": "BlueOps - Bars tatics filter per techniques range",
+      "visState": "{\"title\":\"BlueOps - Bars tatics filter per techniques range\",\"type\":\"histogram\",\"params\":{\"type\":\"histogram\",\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Count\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"histogram\",\"mode\":\"stacked\",\"data\":{\"label\":\"Count\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"techniques.tactic.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":11,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"filters\",\"schema\":\"group\",\"params\":{\"filters\":[{\"input\":{\"query\":\"techniques.score:<20\"},\"label\":\"0-19\"},{\"input\":{\"query\":\"techniques.score:>=20 AND techniques.score:<40\"},\"label\":\"20-39\"},{\"input\":{\"query\":\"techniques.score:>=40 AND techniques.score:<60\"},\"label\":\"40-59\"},{\"input\":{\"query\":\"techniques.score:>=60 AND techniques.score:<80\"},\"label\":\"60-79\"},{\"input\":{\"query\":\"techniques.score:>=80 AND techniques.score:<=100\"},\"label\":\"80-100\"}]}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "4ad6afa0-7eee-11e8-9ad5-5fdd121fd1c3",
+    "_type": "visualization",
+    "_source": {
+      "title": "BlueOps - Risk Level",
+      "visState": "{\"title\":\"BlueOps - Risk Level\",\"type\":\"goal\",\"params\":{\"addTooltip\":true,\"addLegend\":true,\"isDisplayWarning\":true,\"type\":\"gauge\",\"gauge\":{\"verticalSplit\":false,\"autoExtend\":false,\"percentageMode\":false,\"gaugeType\":\"Arc\",\"gaugeStyle\":\"Full\",\"backStyle\":\"Full\",\"orientation\":\"vertical\",\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"gaugeColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":25},{\"from\":26,\"to\":59},{\"from\":60,\"to\":80},{\"from\":81,\"to\":100}],\"invertColors\":false,\"labels\":{\"show\":true,\"color\":\"black\"},\"scale\":{\"show\":true,\"labels\":false,\"color\":\"#333\",\"width\":2},\"type\":\"meter\",\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":60},\"extendRange\":false}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"techniques.score\",\"customLabel\":\"Avg Score\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 25\":\"rgb(0,104,55)\",\"26 - 59\":\"rgb(183,224,117)\",\"60 - 80\":\"rgb(253,191,111)\",\"81 - 100\":\"rgb(165,0,38)\"},\"legendOpen\":true,\"colors\":{\"0 - 25\":\"#BF1B00\",\"26 - 60\":\"#EAB839\",\"61 - 80\":\"#EF843C\",\"26 - 45\":\"#EAB839\",\"46 - 80\":\"#9AC48A\",\"81 - 100\":\"#3F6833\",\"26 - 59\":\"#E5AC0E\",\"60 - 80\":\"#F4D598\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "7b178240-7eec-11e8-9ad5-5fdd121fd1c3",
+    "_type": "visualization",
+    "_source": {
+      "title": "BlueOps - Heatmap (Sum Score per Tatic)",
+      "visState": "{\"title\":\"BlueOps - Heatmap (Sum Score per Tatic)\",\"type\":\"heatmap\",\"params\":{\"type\":\"heatmap\",\"addTooltip\":true,\"addLegend\":true,\"enableHover\":false,\"legendPosition\":\"right\",\"times\":[],\"colorsNumber\":5,\"colorSchema\":\"Green to Red\",\"setColorRange\":false,\"colorsRange\":[],\"invertColors\":true,\"percentageMode\":false,\"valueAxes\":[{\"show\":false,\"id\":\"ValueAxis-1\",\"type\":\"value\",\"scale\":{\"type\":\"linear\",\"defaultYExtents\":false},\"labels\":{\"show\":false,\"rotate\":0,\"overwriteColor\":false,\"color\":\"#555\"}}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"techniques.score\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"techniques.tactic.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":10,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 600\":\"rgb(165,0,38)\",\"600 - 1,200\":\"rgb(244,109,67)\",\"1,200 - 1,800\":\"rgb(254,224,139)\",\"1,800 - 2,400\":\"rgb(217,239,139)\",\"2,400 - 3,000\":\"rgb(102,189,99)\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "8591f140-7efd-11e8-9ad5-5fdd121fd1c3",
+    "_type": "visualization",
+    "_source": {
+      "title": "BlueOps - Score Range Per Techniques",
+      "visState": "{\"title\":\"BlueOps - Score Range Per Techniques\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":false,\"labels\":{\"show\":true,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"filters\",\"schema\":\"segment\",\"params\":{\"filters\":[{\"input\":{\"query\":\"techniques.score:<20\"},\"label\":\"0-19\"},{\"input\":{\"query\":\"techniques.score:>=20 AND techniques.score:<40\"},\"label\":\"20-39\"},{\"input\":{\"query\":\"techniques.score:>=40 AND techniques.score:<60\"},\"label\":\"40-59\"},{\"input\":{\"query\":\"techniques.score:>=60 AND techniques.score:<80\"},\"label\":\"60-79\"},{\"input\":{\"query\":\"techniques.score:>=80 AND techniques.score:<=100\"},\"label\":\"80-100\"}]}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"0-19\":\"#BF1B00\",\"20-39\":\"#E0752D\",\"40-59\":\"#E5AC0E\",\"80-100\":\"#3F6833\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "88c1c6b0-7ef8-11e8-9ad5-5fdd121fd1c3",
+    "_type": "visualization",
+    "_source": {
+      "title": "BlueOps - Score per Technique",
+      "visState": "{\"title\":\"BlueOps - Score per Technique\",\"type\":\"table\",\"params\":{\"perPage\":15,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"techniques.score\",\"customLabel\":\"Avg Score\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"techniques.techniqueID.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":500,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Techniques\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "db5ae830-7ef7-11e8-9ad5-5fdd121fd1c3",
+    "_type": "visualization",
+    "_source": {
+      "title": "BlueOps - Avg Score per Tatic",
+      "visState": "{\"title\":\"BlueOps - Avg Score per Tatic\",\"type\":\"table\",\"params\":{\"perPage\":15,\"showPartialRows\":false,\"showMeticsAtAllLevels\":false,\"sort\":{\"columnIndex\":null,\"direction\":null},\"showTotal\":false,\"totalFunc\":\"sum\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"techniques.score\",\"customLabel\":\"Avg Score\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"techniques.tactic.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":20,\"order\":\"asc\",\"orderBy\":\"1\",\"customLabel\":\"Tatics\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "8fd069e0-7f28-11e8-9ad5-5fdd121fd1c3",
+    "_type": "visualization",
+    "_source": {
+      "title": "BlueOps - Risk Protection Credential Access",
+      "visState": "{\"title\":\"BlueOps - Risk Protection Credential Access\",\"type\":\"goal\",\"params\":{\"addLegend\":false,\"addTooltip\":true,\"gauge\":{\"autoExtend\":false,\"backStyle\":\"Full\",\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":25},{\"from\":26,\"to\":59},{\"from\":60,\"to\":80},{\"from\":81,\"to\":100}],\"extendRange\":true,\"gaugeColorMode\":\"None\",\"gaugeStyle\":\"Full\",\"gaugeType\":\"Arc\",\"invertColors\":false,\"labels\":{\"color\":\"black\",\"show\":true},\"orientation\":\"vertical\",\"percentageMode\":true,\"scale\":{\"color\":\"#333\",\"labels\":false,\"show\":true,\"width\":2},\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":60,\"labelColor\":false,\"subText\":\"Risk Protection Level\"},\"type\":\"meter\",\"useRanges\":false,\"verticalSplit\":false},\"isDisplayWarning\":true,\"type\":\"gauge\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"techniques.score\",\"customLabel\":\"Credential Access\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"0 - 25\":\"#BF1B00\",\"26 - 45\":\"#EAB839\",\"26 - 59\":\"#E5AC0E\",\"26 - 60\":\"#EAB839\",\"46 - 80\":\"#9AC48A\",\"60 - 80\":\"#F4D598\",\"61 - 80\":\"#EF843C\",\"81 - 100\":\"#3F6833\"},\"defaultColors\":{\"0 - 25\":\"rgb(0,104,55)\",\"26 - 59\":\"rgb(183,224,117)\",\"60 - 80\":\"rgb(253,191,111)\",\"81 - 100\":\"rgb(165,0,38)\"},\"legendOpen\":true}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"filter\":[{\"meta\":{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"techniques.tactic\",\"value\":\"credential-access\",\"params\":{\"query\":\"credential-access\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"techniques.tactic\":{\"query\":\"credential-access\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "19dca4b0-7f28-11e8-9ad5-5fdd121fd1c3",
+    "_type": "visualization",
+    "_source": {
+      "title": "BlueOps - Risk Protection Defense Evasion",
+      "visState": "{\"title\":\"BlueOps - Risk Protection Defense Evasion\",\"type\":\"goal\",\"params\":{\"addLegend\":false,\"addTooltip\":true,\"gauge\":{\"autoExtend\":false,\"backStyle\":\"Full\",\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":25},{\"from\":26,\"to\":59},{\"from\":60,\"to\":80},{\"from\":81,\"to\":100}],\"extendRange\":true,\"gaugeColorMode\":\"None\",\"gaugeStyle\":\"Full\",\"gaugeType\":\"Arc\",\"invertColors\":false,\"labels\":{\"color\":\"black\",\"show\":true},\"orientation\":\"vertical\",\"percentageMode\":true,\"scale\":{\"color\":\"#333\",\"labels\":false,\"show\":true,\"width\":2},\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":60,\"labelColor\":false,\"subText\":\"Risk Protection Level\"},\"type\":\"meter\",\"useRanges\":false,\"verticalSplit\":false},\"isDisplayWarning\":true,\"type\":\"gauge\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"techniques.score\",\"customLabel\":\"Defense Evasion\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"0 - 25\":\"#BF1B00\",\"26 - 45\":\"#EAB839\",\"26 - 59\":\"#E5AC0E\",\"26 - 60\":\"#EAB839\",\"46 - 80\":\"#9AC48A\",\"60 - 80\":\"#F4D598\",\"61 - 80\":\"#EF843C\",\"81 - 100\":\"#3F6833\"},\"defaultColors\":{\"0 - 25\":\"rgb(0,104,55)\",\"26 - 59\":\"rgb(183,224,117)\",\"60 - 80\":\"rgb(253,191,111)\",\"81 - 100\":\"rgb(165,0,38)\"},\"legendOpen\":true}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"filter\":[{\"meta\":{\"negate\":false,\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"type\":\"phrase\",\"key\":\"techniques.tactic\",\"value\":\"defense-evasion\",\"params\":{\"query\":\"defense-evasion\",\"type\":\"phrase\"},\"disabled\":false,\"alias\":null},\"query\":{\"match\":{\"techniques.tactic\":{\"query\":\"defense-evasion\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "421e46e0-7f28-11e8-9ad5-5fdd121fd1c3",
+    "_type": "visualization",
+    "_source": {
+      "title": "BlueOps - Risk Protection Initial Access",
+      "visState": "{\"title\":\"BlueOps - Risk Protection Initial Access\",\"type\":\"goal\",\"params\":{\"addLegend\":false,\"addTooltip\":true,\"gauge\":{\"autoExtend\":false,\"backStyle\":\"Full\",\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":25},{\"from\":26,\"to\":59},{\"from\":60,\"to\":80},{\"from\":81,\"to\":100}],\"extendRange\":true,\"gaugeColorMode\":\"None\",\"gaugeStyle\":\"Full\",\"gaugeType\":\"Arc\",\"invertColors\":false,\"labels\":{\"color\":\"black\",\"show\":true},\"orientation\":\"vertical\",\"percentageMode\":true,\"scale\":{\"color\":\"#333\",\"labels\":false,\"show\":true,\"width\":2},\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":60,\"labelColor\":false,\"subText\":\"Risk Protection Level\"},\"type\":\"meter\",\"useRanges\":false,\"verticalSplit\":false},\"isDisplayWarning\":true,\"type\":\"gauge\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"techniques.score\",\"customLabel\":\"Initial Access\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"0 - 25\":\"#BF1B00\",\"26 - 45\":\"#EAB839\",\"26 - 59\":\"#E5AC0E\",\"26 - 60\":\"#EAB839\",\"46 - 80\":\"#9AC48A\",\"60 - 80\":\"#F4D598\",\"61 - 80\":\"#EF843C\",\"81 - 100\":\"#3F6833\"},\"defaultColors\":{\"0 - 25\":\"rgb(0,104,55)\",\"26 - 59\":\"rgb(183,224,117)\",\"60 - 80\":\"rgb(253,191,111)\",\"81 - 100\":\"rgb(165,0,38)\"},\"legendOpen\":true}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"filter\":[{\"meta\":{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"techniques.tactic\",\"value\":\"initial-access\",\"params\":{\"query\":\"initial-access\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"techniques.tactic\":{\"query\":\"initial-access\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "b173dd20-7f28-11e8-9ad5-5fdd121fd1c3",
+    "_type": "visualization",
+    "_source": {
+      "title": "BlueOps - Risk Protection Persistence",
+      "visState": "{\"title\":\"BlueOps - Risk Protection Persistence\",\"type\":\"goal\",\"params\":{\"addLegend\":false,\"addTooltip\":true,\"gauge\":{\"autoExtend\":false,\"backStyle\":\"Full\",\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":25},{\"from\":26,\"to\":59},{\"from\":60,\"to\":80},{\"from\":81,\"to\":100}],\"extendRange\":true,\"gaugeColorMode\":\"None\",\"gaugeStyle\":\"Full\",\"gaugeType\":\"Arc\",\"invertColors\":false,\"labels\":{\"color\":\"black\",\"show\":true},\"orientation\":\"vertical\",\"percentageMode\":true,\"scale\":{\"color\":\"#333\",\"labels\":false,\"show\":true,\"width\":2},\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":60,\"labelColor\":false,\"subText\":\"Risk Protection Level\"},\"type\":\"meter\",\"useRanges\":false,\"verticalSplit\":false},\"isDisplayWarning\":true,\"type\":\"gauge\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"techniques.score\",\"customLabel\":\"Persistence\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"0 - 25\":\"#BF1B00\",\"26 - 45\":\"#EAB839\",\"26 - 59\":\"#E5AC0E\",\"26 - 60\":\"#EAB839\",\"46 - 80\":\"#9AC48A\",\"60 - 80\":\"#F4D598\",\"61 - 80\":\"#EF843C\",\"81 - 100\":\"#3F6833\"},\"defaultColors\":{\"0 - 25\":\"rgb(0,104,55)\",\"26 - 59\":\"rgb(183,224,117)\",\"60 - 80\":\"rgb(253,191,111)\",\"81 - 100\":\"rgb(165,0,38)\"},\"legendOpen\":true}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"filter\":[{\"meta\":{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"techniques.tactic.keyword\",\"value\":\"persistence\",\"params\":{\"query\":\"persistence\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"techniques.tactic.keyword\":{\"query\":\"persistence\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "d8e11850-7f28-11e8-9ad5-5fdd121fd1c3",
+    "_type": "visualization",
+    "_source": {
+      "title": "BlueOps - Risk Protection Execution",
+      "visState": "{\"title\":\"BlueOps - Risk Protection Execution\",\"type\":\"goal\",\"params\":{\"addLegend\":false,\"addTooltip\":true,\"gauge\":{\"autoExtend\":false,\"backStyle\":\"Full\",\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":25},{\"from\":26,\"to\":59},{\"from\":60,\"to\":80},{\"from\":81,\"to\":100}],\"extendRange\":true,\"gaugeColorMode\":\"None\",\"gaugeStyle\":\"Full\",\"gaugeType\":\"Arc\",\"invertColors\":false,\"labels\":{\"color\":\"black\",\"show\":true},\"orientation\":\"vertical\",\"percentageMode\":true,\"scale\":{\"color\":\"#333\",\"labels\":false,\"show\":true,\"width\":2},\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":60,\"labelColor\":false,\"subText\":\"Risk Protection Level\"},\"type\":\"meter\",\"useRanges\":false,\"verticalSplit\":false},\"isDisplayWarning\":true,\"type\":\"gauge\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"techniques.score\",\"customLabel\":\"Execution\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"0 - 25\":\"#BF1B00\",\"26 - 45\":\"#EAB839\",\"26 - 59\":\"#E5AC0E\",\"26 - 60\":\"#EAB839\",\"46 - 80\":\"#9AC48A\",\"60 - 80\":\"#F4D598\",\"61 - 80\":\"#EF843C\",\"81 - 100\":\"#3F6833\"},\"defaultColors\":{\"0 - 25\":\"rgb(0,104,55)\",\"26 - 59\":\"rgb(183,224,117)\",\"60 - 80\":\"rgb(253,191,111)\",\"81 - 100\":\"rgb(165,0,38)\"},\"legendOpen\":true}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"filter\":[{\"meta\":{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"techniques.tactic.keyword\",\"value\":\"execution\",\"params\":{\"query\":\"execution\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"techniques.tactic.keyword\":{\"query\":\"execution\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "cc6c6c80-7f02-11e8-9ad5-5fdd121fd1c3",
+    "_type": "visualization",
+    "_source": {
+      "title": "BlueOps - Heatmap (Filter by Techniques Score)",
+      "visState": "{\"title\":\"BlueOps - Heatmap (Filter by Techniques Score)\",\"type\":\"heatmap\",\"params\":{\"type\":\"heatmap\",\"addTooltip\":true,\"addLegend\":true,\"enableHover\":false,\"legendPosition\":\"right\",\"times\":[],\"colorsNumber\":4,\"colorSchema\":\"Yellow to Red\",\"setColorRange\":true,\"colorsRange\":[{\"from\":0,\"to\":5},{\"from\":6,\"to\":10},{\"from\":11,\"to\":15},{\"from\":16,\"to\":20},{\"from\":21,\"to\":30}],\"invertColors\":false,\"percentageMode\":false,\"valueAxes\":[{\"show\":false,\"id\":\"ValueAxis-1\",\"type\":\"value\",\"scale\":{\"type\":\"linear\",\"defaultYExtents\":false},\"labels\":{\"show\":true,\"rotate\":0,\"overwriteColor\":true,\"color\":\"#000\"}}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"techniques.tactic.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":11,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Tatics\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"filters\",\"schema\":\"group\",\"params\":{\"filters\":[{\"input\":{\"query\":\"techniques.score:<20\"},\"label\":\"0-19\"},{\"input\":{\"query\":\"techniques.score:>=20 AND techniques.score:<40\"},\"label\":\"20-39\"},{\"input\":{\"query\":\"techniques.score:>=40 AND techniques.score:<60\"},\"label\":\"40-59\"},{\"input\":{\"query\":\"techniques.score:>=60 AND techniques.score:<80\"},\"label\":\"60-79\"},{\"input\":{\"query\":\"techniques.score:>=80 AND techniques.score:<=100\"},\"label\":\"80-100\"}]}}]}",
+      "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 5\":\"rgb(255,255,204)\",\"6 - 10\":\"rgb(254,217,118)\",\"11 - 15\":\"rgb(253,141,60)\",\"16 - 20\":\"rgb(227,27,28)\",\"21 - 30\":\"rgb(128,0,38)\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "91b526b0-7eec-11e8-9ad5-5fdd121fd1c3",
+    "_type": "visualization",
+    "_source": {
+      "title": "BlueOps - Heatmap (Avg Score per Tatic)",
+      "visState": "{\"title\":\"BlueOps - Heatmap (Avg Score per Tatic)\",\"type\":\"heatmap\",\"params\":{\"type\":\"heatmap\",\"addTooltip\":true,\"addLegend\":true,\"enableHover\":false,\"legendPosition\":\"right\",\"times\":[],\"colorsNumber\":4,\"colorSchema\":\"Green to Red\",\"setColorRange\":true,\"colorsRange\":[{\"from\":0,\"to\":25},{\"from\":26,\"to\":40},{\"from\":41,\"to\":60},{\"from\":61,\"to\":90},{\"from\":91,\"to\":100}],\"invertColors\":true,\"percentageMode\":false,\"valueAxes\":[{\"show\":false,\"id\":\"ValueAxis-1\",\"type\":\"value\",\"scale\":{\"type\":\"linear\",\"defaultYExtents\":false},\"labels\":{\"show\":false,\"rotate\":270,\"overwriteColor\":true,\"color\":\"#555\"}}]},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"techniques.score\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"techniques.tactic.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":11,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"defaultColors\":{\"0 - 25\":\"rgb(165,0,38)\",\"26 - 40\":\"rgb(249,142,82)\",\"41 - 60\":\"rgb(255,255,190)\",\"61 - 90\":\"rgb(135,203,103)\",\"91 - 100\":\"rgb(0,104,55)\"},\"colors\":{\"26 - 40\":\"#F2C96D\",\"41 - 60\":\"#F4D598\"}}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "dd3b41f0-7eec-11e8-9ad5-5fdd121fd1c3",
+    "_type": "visualization",
+    "_source": {
+      "title": "BlueOps - Metrics",
+      "visState": "{\"title\":\"BlueOps - Metrics\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":30}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"cardinality\",\"schema\":\"metric\",\"params\":{\"field\":\"techniques.techniqueID.keyword\",\"customLabel\":\"Total Techniques\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"techniques.score\",\"customLabel\":\"Max Score\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"min\",\"schema\":\"metric\",\"params\":{\"field\":\"techniques.score\",\"customLabel\":\"Min Score\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"techniques.score\",\"customLabel\":\"Avg Score\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "f93acd80-7f28-11e8-9ad5-5fdd121fd1c3",
+    "_type": "visualization",
+    "_source": {
+      "title": "BlueOps - Risk Protection Privilege Escalation",
+      "visState": "{\"title\":\"BlueOps - Risk Protection Privilege Escalation\",\"type\":\"goal\",\"params\":{\"addLegend\":false,\"addTooltip\":true,\"gauge\":{\"autoExtend\":false,\"backStyle\":\"Full\",\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":25},{\"from\":26,\"to\":59},{\"from\":60,\"to\":80},{\"from\":81,\"to\":100}],\"extendRange\":true,\"gaugeColorMode\":\"None\",\"gaugeStyle\":\"Full\",\"gaugeType\":\"Arc\",\"invertColors\":false,\"labels\":{\"color\":\"black\",\"show\":true},\"orientation\":\"vertical\",\"percentageMode\":true,\"scale\":{\"color\":\"#333\",\"labels\":false,\"show\":true,\"width\":2},\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":60,\"labelColor\":false,\"subText\":\"Risk Protection Level\"},\"type\":\"meter\",\"useRanges\":false,\"verticalSplit\":false},\"isDisplayWarning\":true,\"type\":\"gauge\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"techniques.score\",\"customLabel\":\"Privilege Escalation\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"0 - 25\":\"#BF1B00\",\"26 - 45\":\"#EAB839\",\"26 - 59\":\"#E5AC0E\",\"26 - 60\":\"#EAB839\",\"46 - 80\":\"#9AC48A\",\"60 - 80\":\"#F4D598\",\"61 - 80\":\"#EF843C\",\"81 - 100\":\"#3F6833\"},\"defaultColors\":{\"0 - 25\":\"rgb(0,104,55)\",\"26 - 59\":\"rgb(183,224,117)\",\"60 - 80\":\"rgb(253,191,111)\",\"81 - 100\":\"rgb(165,0,38)\"},\"legendOpen\":true}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"filter\":[{\"meta\":{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"techniques.tactic.keyword\",\"value\":\"privilege-escalation\",\"params\":{\"query\":\"privilege-escalation\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"techniques.tactic.keyword\":{\"query\":\"privilege-escalation\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "0eeed540-7f29-11e8-9ad5-5fdd121fd1c3",
+    "_type": "visualization",
+    "_source": {
+      "title": "BlueOps - Risk Protection Command & Control",
+      "visState": "{\"title\":\"BlueOps - Risk Protection Command & Control\",\"type\":\"goal\",\"params\":{\"addLegend\":false,\"addTooltip\":true,\"gauge\":{\"autoExtend\":false,\"backStyle\":\"Full\",\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":25},{\"from\":26,\"to\":59},{\"from\":60,\"to\":80},{\"from\":81,\"to\":100}],\"extendRange\":true,\"gaugeColorMode\":\"None\",\"gaugeStyle\":\"Full\",\"gaugeType\":\"Arc\",\"invertColors\":false,\"labels\":{\"color\":\"black\",\"show\":true},\"orientation\":\"vertical\",\"percentageMode\":true,\"scale\":{\"color\":\"#333\",\"labels\":false,\"show\":true,\"width\":2},\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":60,\"labelColor\":false,\"subText\":\"Risk Protection Level\"},\"type\":\"meter\",\"useRanges\":false,\"verticalSplit\":false},\"isDisplayWarning\":true,\"type\":\"gauge\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"techniques.score\",\"customLabel\":\"Command & Control\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"0 - 25\":\"#BF1B00\",\"26 - 45\":\"#EAB839\",\"26 - 59\":\"#E5AC0E\",\"26 - 60\":\"#EAB839\",\"46 - 80\":\"#9AC48A\",\"60 - 80\":\"#F4D598\",\"61 - 80\":\"#EF843C\",\"81 - 100\":\"#3F6833\"},\"defaultColors\":{\"0 - 25\":\"rgb(0,104,55)\",\"26 - 59\":\"rgb(183,224,117)\",\"60 - 80\":\"rgb(253,191,111)\",\"81 - 100\":\"rgb(165,0,38)\"},\"legendOpen\":true}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"filter\":[{\"meta\":{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"techniques.tactic.keyword\",\"value\":\"command-and-control\",\"params\":{\"query\":\"command-and-control\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"techniques.tactic.keyword\":{\"query\":\"command-and-control\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "5871cd80-7f29-11e8-9ad5-5fdd121fd1c3",
+    "_type": "visualization",
+    "_source": {
+      "title": "BlueOps - Risk Protection Lateral Movement",
+      "visState": "{\"title\":\"BlueOps - Risk Protection Lateral Movement\",\"type\":\"goal\",\"params\":{\"addLegend\":false,\"addTooltip\":true,\"gauge\":{\"autoExtend\":false,\"backStyle\":\"Full\",\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":25},{\"from\":26,\"to\":59},{\"from\":60,\"to\":80},{\"from\":81,\"to\":100}],\"extendRange\":true,\"gaugeColorMode\":\"None\",\"gaugeStyle\":\"Full\",\"gaugeType\":\"Arc\",\"invertColors\":false,\"labels\":{\"color\":\"black\",\"show\":true},\"orientation\":\"vertical\",\"percentageMode\":true,\"scale\":{\"color\":\"#333\",\"labels\":false,\"show\":true,\"width\":2},\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":60,\"labelColor\":false,\"subText\":\"Risk Protection Level\"},\"type\":\"meter\",\"useRanges\":false,\"verticalSplit\":false},\"isDisplayWarning\":true,\"type\":\"gauge\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"techniques.score\",\"customLabel\":\"Lateral Movement\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"0 - 25\":\"#BF1B00\",\"26 - 45\":\"#EAB839\",\"26 - 59\":\"#E5AC0E\",\"26 - 60\":\"#EAB839\",\"46 - 80\":\"#9AC48A\",\"60 - 80\":\"#F4D598\",\"61 - 80\":\"#EF843C\",\"81 - 100\":\"#3F6833\"},\"defaultColors\":{\"0 - 25\":\"rgb(0,104,55)\",\"26 - 59\":\"rgb(183,224,117)\",\"60 - 80\":\"rgb(253,191,111)\",\"81 - 100\":\"rgb(165,0,38)\"},\"legendOpen\":true}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"filter\":[{\"meta\":{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"techniques.tactic.keyword\",\"value\":\"lateral-movement\",\"params\":{\"query\":\"lateral-movement\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"techniques.tactic.keyword\":{\"query\":\"lateral-movement\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "7e4a10d0-7f29-11e8-9ad5-5fdd121fd1c3",
+    "_type": "visualization",
+    "_source": {
+      "title": "BlueOps - Risk Protection Exfiltration",
+      "visState": "{\"title\":\"BlueOps - Risk Protection Exfiltration\",\"type\":\"goal\",\"params\":{\"addLegend\":false,\"addTooltip\":true,\"gauge\":{\"autoExtend\":false,\"backStyle\":\"Full\",\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":25},{\"from\":26,\"to\":59},{\"from\":60,\"to\":80},{\"from\":81,\"to\":100}],\"extendRange\":true,\"gaugeColorMode\":\"None\",\"gaugeStyle\":\"Full\",\"gaugeType\":\"Arc\",\"invertColors\":false,\"labels\":{\"color\":\"black\",\"show\":true},\"orientation\":\"vertical\",\"percentageMode\":true,\"scale\":{\"color\":\"#333\",\"labels\":false,\"show\":true,\"width\":2},\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":60,\"labelColor\":false,\"subText\":\"Risk Protection Level\"},\"type\":\"meter\",\"useRanges\":false,\"verticalSplit\":false},\"isDisplayWarning\":true,\"type\":\"gauge\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"techniques.score\",\"customLabel\":\"Exfiltration\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"0 - 25\":\"#BF1B00\",\"26 - 45\":\"#EAB839\",\"26 - 59\":\"#E5AC0E\",\"26 - 60\":\"#EAB839\",\"46 - 80\":\"#9AC48A\",\"60 - 80\":\"#F4D598\",\"61 - 80\":\"#EF843C\",\"81 - 100\":\"#3F6833\"},\"defaultColors\":{\"0 - 25\":\"rgb(0,104,55)\",\"26 - 59\":\"rgb(183,224,117)\",\"60 - 80\":\"rgb(253,191,111)\",\"81 - 100\":\"rgb(165,0,38)\"},\"legendOpen\":true}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"filter\":[{\"meta\":{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"techniques.tactic.keyword\",\"value\":\"exfiltration\",\"params\":{\"query\":\"exfiltration\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"techniques.tactic.keyword\":{\"query\":\"exfiltration\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "24335250-7f29-11e8-9ad5-5fdd121fd1c3",
+    "_type": "visualization",
+    "_source": {
+      "title": "BlueOps - Risk Protection Collection",
+      "visState": "{\"title\":\"BlueOps - Risk Protection Collection\",\"type\":\"goal\",\"params\":{\"addLegend\":false,\"addTooltip\":true,\"gauge\":{\"autoExtend\":false,\"backStyle\":\"Full\",\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":25},{\"from\":26,\"to\":59},{\"from\":60,\"to\":80},{\"from\":81,\"to\":100}],\"extendRange\":true,\"gaugeColorMode\":\"None\",\"gaugeStyle\":\"Full\",\"gaugeType\":\"Arc\",\"invertColors\":false,\"labels\":{\"color\":\"black\",\"show\":true},\"orientation\":\"vertical\",\"percentageMode\":true,\"scale\":{\"color\":\"#333\",\"labels\":false,\"show\":true,\"width\":2},\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":60,\"labelColor\":false,\"subText\":\"Risk Protection Level\"},\"type\":\"meter\",\"useRanges\":false,\"verticalSplit\":false},\"isDisplayWarning\":true,\"type\":\"gauge\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"techniques.score\",\"customLabel\":\"Collection\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"0 - 25\":\"#BF1B00\",\"26 - 45\":\"#EAB839\",\"26 - 59\":\"#E5AC0E\",\"26 - 60\":\"#EAB839\",\"46 - 80\":\"#9AC48A\",\"60 - 80\":\"#F4D598\",\"61 - 80\":\"#EF843C\",\"81 - 100\":\"#3F6833\"},\"defaultColors\":{\"0 - 25\":\"rgb(0,104,55)\",\"26 - 59\":\"rgb(183,224,117)\",\"60 - 80\":\"rgb(253,191,111)\",\"81 - 100\":\"rgb(165,0,38)\"},\"legendOpen\":true}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"filter\":[{\"meta\":{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"techniques.tactic.keyword\",\"value\":\"collection\",\"params\":{\"query\":\"collection\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"techniques.tactic.keyword\":{\"query\":\"collection\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  },
+  {
+    "_id": "42395380-7f29-11e8-9ad5-5fdd121fd1c3",
+    "_type": "visualization",
+    "_source": {
+      "title": "BlueOps - Risk Protection Discovery",
+      "visState": "{\"title\":\"BlueOps - Risk Protection Discovery\",\"type\":\"goal\",\"params\":{\"addLegend\":false,\"addTooltip\":true,\"gauge\":{\"autoExtend\":false,\"backStyle\":\"Full\",\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":25},{\"from\":26,\"to\":59},{\"from\":60,\"to\":80},{\"from\":81,\"to\":100}],\"extendRange\":true,\"gaugeColorMode\":\"None\",\"gaugeStyle\":\"Full\",\"gaugeType\":\"Arc\",\"invertColors\":false,\"labels\":{\"color\":\"black\",\"show\":true},\"orientation\":\"vertical\",\"percentageMode\":true,\"scale\":{\"color\":\"#333\",\"labels\":false,\"show\":true,\"width\":2},\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":60,\"labelColor\":false,\"subText\":\"Risk Protection Level\"},\"type\":\"meter\",\"useRanges\":false,\"verticalSplit\":false},\"isDisplayWarning\":true,\"type\":\"gauge\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"techniques.score\",\"customLabel\":\"Discovery\"}}]}",
+      "uiStateJSON": "{\"vis\":{\"colors\":{\"0 - 25\":\"#BF1B00\",\"26 - 45\":\"#EAB839\",\"26 - 59\":\"#E5AC0E\",\"26 - 60\":\"#EAB839\",\"46 - 80\":\"#9AC48A\",\"60 - 80\":\"#F4D598\",\"61 - 80\":\"#EF843C\",\"81 - 100\":\"#3F6833\"},\"defaultColors\":{\"0 - 25\":\"rgb(0,104,55)\",\"26 - 59\":\"rgb(183,224,117)\",\"60 - 80\":\"rgb(253,191,111)\",\"81 - 100\":\"rgb(165,0,38)\"},\"legendOpen\":true}}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"filter\":[{\"meta\":{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"techniques.tactic.keyword\",\"value\":\"discovery\",\"params\":{\"query\":\"discovery\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"techniques.tactic.keyword\":{\"query\":\"discovery\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+      }
+    }
+  }
+]

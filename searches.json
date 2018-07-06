@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "3e9c74f0-7eed-11e8-9ad5-5fdd121fd1c3",
+    "_type": "search",
+    "_source": {
+      "title": "BlueOps - View Matrix",
+      "description": "",
+      "hits": 0,
+      "columns": [
+        "name",
+        "description",
+        "techniques.tactic",
+        "techniques.techniqueID",
+        "techniques.score"
+      ],
+      "sort": [
+        "@timestamp",
+        "desc"
+      ],
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"9456a200-7eeb-11e8-9ad5-5fdd121fd1c3\",\"highlightAll\":true,\"version\":true,\"query\":{\"language\":\"lucene\",\"query\":\"\"},\"filter\":[]}"
+      }
+    }
+  }
+]
